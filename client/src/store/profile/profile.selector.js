@@ -1,0 +1,1 @@
+export const selectProfileResponse = (state)=>state.profile.response

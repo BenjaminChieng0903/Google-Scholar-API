@@ -1,0 +1,3 @@
+export const DETAILS_ACTION_TYPE = {
+    GET_DETAILS_DATA: 'GET_DETAILS_DATA'
+}
