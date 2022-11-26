@@ -1,23 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
-
+import{Route, Routes} from'react-router-dom'
+import NaviBar from './route/navibar/NaviBar';
+import Home from './route/homepage/Home';
+import SearchAuthors from './searchauthors/SearchAuthors';
+import SearchKeywords from './searchkeywords/SearchKeywords';
+import SearchResult from './searchResult/SearchResult'
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Routes>
+      <Route path='/' element = {<NaviBar/>}>
+        <Route index element = {<Home/>}></Route>
+        <Route path ='keywords'element = {<SearchKeywords/>}></Route>
+        <Route path ='authors' element = {<SearchAuthors/>}></Route>
+        <Route path = 'result' element = {<SearchResult/>}></Route>
+      </Route>
+      </Routes>
     </div>
   );
 }
